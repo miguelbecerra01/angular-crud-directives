@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-heading" #heading>
+    {{server.name}}
+  </div>
+  <div class="panel-body">
+    <p>{{name}}</p>
+    <!-- <span [ngStyle]="{'color':server.type==='blueprint' && 'blue'}">{{server.content}} ->
+      {{server.type}}</span> -->
+    <!-- Receives the content sent from the parent int the component body -->
+    <ng-content></ng-content>
+  </div>
+</div>

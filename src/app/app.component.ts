@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Server from './models/server.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'simple-crud';
+  servers: Server[] = [];
+
+  onServerAdded(server: Server) {
+    this.servers.push(server);
+  }
+
+  onBlueprintAdded(server: Server) {
+    this.servers.push(server);
+  }
+
+  onChangeFirst() {
+    this.servers[0].name = 'name changed';
+  }
+
+  onDestroyFirst() {
+    this.servers.splice(0, 1);
+  }
 }
+
